@@ -7,13 +7,13 @@ form.addEventListener('submit', handleSubmit);
 window.addEventListener('load', handleLoad);
 
 function handleLoad() {
-const radioBtns = document.getElementsByName('unit');
-radioBtns.forEach(async (btn) => {
-	if (btn.checked) {
-		unit = btn.value;
-	}
-	console.log(unit);
-} );
+	const radioBtns = document.getElementsByName('unit');
+	radioBtns.forEach(async (btn) => {
+		if (btn.checked) {
+			unit = btn.value;
+		}
+		console.log(unit);
+	});
 }
 
 async function fetchWeatherByCoords(position) {
@@ -76,6 +76,8 @@ async function handleSubmit(event) {
 	}
 } 
 
+// Fetch weather by city name entered by user
+
 async function fetchWeatherByCity(city, unit = "standard") {
 	const endpoint = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=${unit}&appid=d4e29d903803da845f10013f231c089d`;
 	const response = await fetch(endpoint);
@@ -87,6 +89,8 @@ async function fetchWeatherByCity(city, unit = "standard") {
 	const json = await response.json();
 	return json;
 }
+
+// Display results on the page
 
 function displayResults(json) {
 	const temp = document.querySelector('.js-temp');

@@ -13,11 +13,19 @@
 					<h1>Simple Weather App</h1>
 					<form class="js-form">
 						<input type="text" class="js-input" placeholder="Search for a city" autofocus>
+
 						<div class="radio-buttons">
-							<label for=""><input type="radio" name="unit" class="radioBtn" value="metric" checked>Celsius</label>
-							<label for=""><input type="radio" name="unit" class="radioBtn" value="imperial">Fahrenheit</label>
-							<label for=""><input type="radio" name="unit" class="radioBtn" value="standard">Kelvin</label>
+							<label for="">
+								<input type="radio" name="unit" class="radioBtn" value="metric" checked>Celsius
+							</label>
+							<label for="">
+								<input type="radio" name="unit" class="radioBtn" value="imperial">Fahrenheit
+							</label>
+							<label for="">
+								<input type="radio" name="unit" class="radioBtn" value="standard">Kelvin
+							</label>
 						</div>
+
 						<button type="submit" class="button js-btn">Submit</button>
 					</form>
 				</section>
@@ -29,7 +37,7 @@
 			<section class="weather-results js-weather-results">
 				<h3 class="city-name js-city-name"></h3>
 				<div class="icons">
-					<svg class="icon hidden icon-clouds js-clouds"><use href="#icon-clouds"></use></svg>
+					<svg class="icon hidden icon-clouds js-clouds js-haze"><use href="#icon-clouds"></use></svg>
 					<svg class="icon hidden icon-sun js-clear"><use href="#icon-sun"></use></svg>
 					<svg class="icon hidden icon-cloud-rain js-thunderstorm js-rain js-drizzle"><use href="#icon-cloud-rain"></use></svg>
 					<svg class="icon hidden icon-cloud-snow js-snow"><use xlink:href="#icon-cloud-snow"></use></svg>
